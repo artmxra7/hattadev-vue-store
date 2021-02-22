@@ -31,8 +31,8 @@ export default {
     menuVisible: false,
   }),
   mounted() {
-    i18n.locale = 'ID';
-    document.title = 'Ayen Store';
+    i18n.locale = 'de';
+    document.title = ' Ayen Store';
   },
   created() {
   },
