@@ -1,0 +1,283 @@
+.md-app {
+  max-height: 100vh;
+  overflow: auto;
+
+  .md-app-scroller {
+    flex: 1 1 auto;
+  }
+
+  .md-scrollbar::-webkit-scrollbar {
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .md-button {
+    min-width: auto;
+    font-size: 1rem;
+
+    &_opacity {
+      transition: opacity, $animationSpeed;
+
+      &:hover {
+        opacity: .5;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .md-content {
+    padding: 0;
+  }
+
+  .md-badge {
+    display: none;
+    top: -4px;
+    right: -4px;
+    font-size: .8rem;
+    font-weight: bold;
+
+    &_visible.md-badge {
+      display: flex;
+    }
+  }
+}
+
+.router-link-active,
+.md-icon-font {
+  color: $primaryTextColor !important;
+}
+
+.list {
+  .router-link-active,
+  .md-icon-font {
+    color: $primaryTextColor !important;
+
+    &.router-link-exact-active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}
+
+.md-radio {
+  margin: 14px 16px 14px 0;
+}
+
+.md-radio.md-theme-default.md-checked .md-radio-container {
+  border-color: $companyColor;
+
+  &:after {
+    background-color: $companyColor;
+  }
+}
+
+.md-button {
+  &.md-theme-default.md-fab:not([disabled]).company-color,
+  &.md-theme-default.md-raised:not([disabled]).company-color {
+    background: $companyColor;
+  }
+
+  &-content {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  & + & {
+    margin-left: .5rem;
+  }
+}
+
+.md-button + .md-badge-content,
+.md-badge-content + .md-button {
+  margin-left: .5rem;
+
+  .md-badge.md-theme-default {
+    background-color: $primaryGreen;
+  }
+}
+
+.md-field {
+  padding: 1rem 0 0;
+  margin: 0 0 2rem;
+}
+
+.md-dialog-container {
+  overflow-y: auto;
+}
+
+.md-list {
+  &-item-content {
+    padding: 4px 1rem;
+    font-size: 1rem;
+
+    .menu-item-center & {
+      justify-content: center;
+    }
+  }
+
+  .arrow-static .md-list-expand-icon {
+    margin: 0;
+    flex: 0 0 2rem;
+  }
+  .md-list-item-expand.md-active {
+    background: $lightGrey;
+  }
+
+  &-item.md-inset .md-list-item-content {
+    padding-left: 1rem;
+  }
+
+  .md-subheader.expand-subheader {
+    margin-right: 3.1rem;
+  }
+}
+
+.md-menu-content {
+  &.holder_menu {
+    max-height: 65vh;
+  }
+
+  .md-list-item-text {
+    white-space: normal;
+  }
+}
+
+.md-field label,
+.md-field .md-input,
+.md-field .md-textarea,
+.md-field.md-focused .md-input,
+.md-field.md-focused .md-textarea,
+.md-field.md-has-value .md-input,
+.md-field.md-has-value .md-textarea {
+  font-size: 1rem;
+}
+
+.md-field.md-focused label,
+.md-field.md-has-value label {
+  font-size: 0.8rem;
+}
+
+.md-stepper {
+  width: 100%;
+  -webkit-box-flex: 1;
+  flex: 1 0 100%;
+  padding: 16px 24px;
+}
+
+.md-layout {
+
+  &.md-gutter {
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+
+    > .md-layout-item {
+      padding-right: .5rem;
+      padding-left: .5rem;
+    }
+  }
+}
+
+.auto-height.md-checkbox .md-checkbox-label {
+  height: auto;
+}
+
+.auto-height.md-checkbox .md-checkbox-label {
+  height: auto;
+}
+
+.v-toaster {
+  width: auto;
+  max-width: 30rem;
+
+  .v-toast {
+    display: flex;
+
+    &-btn-clear {
+      margin-left: 1rem;
+      flex: 0 0 auto;
+      order: 2;
+    }
+  }
+}
+
+.md-steppers {
+  .md-steppers-navigation {
+    box-shadow: none;
+    @extend .radius-block;
+    cursor: default;
+    padding: 0;
+    display: flex;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 1rem;
+
+    .md-stepper-header {
+      height: 2.8rem;
+      flex: 1 1 auto;
+
+    }
+
+    .md-button + .md-button {
+      margin: 0;
+    }
+  }
+
+  .md-steppers-wrapper {
+    .md-stepper {
+      padding: 0;
+    }
+  }
+}
+
+.md-button-content {
+  max-width: none;
+  min-width: auto;
+}
+
+.md-select-menu {
+
+  .md-list-item {
+    padding-top: .5rem;
+    margin-top: .5rem;
+    border-top: 1px solid $lightGrey;
+
+    &:first-child {
+      margin-top: 0;
+      border-style: none;
+      padding-top: 4px;
+    }
+  }
+}
+
+.md-tooltip {
+  height: auto;
+  max-width: 30rem;
+  white-space: normal;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.md-title {
+  font-size: 1.25rem;
+}
+
+.md-switch {
+  &.md-checked {
+    .md-switch-container {
+      background-color: $secondaryGreen !important;
+
+      .md-switch-thumb {
+        background-color: $primaryGreen;
+      }
+    }
+  }
+}
+
+.white-space-normal .md-button-clean {
+  white-space: normal;
+}

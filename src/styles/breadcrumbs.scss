@@ -1,0 +1,25 @@
+.breadcrumbs {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    font-size: .8rem;
+    text-transform: uppercase;
+
+    & + & {
+      margin-left: .5rem;
+
+      &:before {
+        content: ">";
+        margin-right: .2rem;
+      }
+    }
+
+    &:last-child {
+      opacity: .6;
+      pointer-events: none;
+    }
+  }
+}

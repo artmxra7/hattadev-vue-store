@@ -1,0 +1,93 @@
+.auth-modal {
+  max-width: 32rem;
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform $animationSpeed;
+
+    .auth-modal_change-form & {
+      transform: translateX(-100%);
+    }
+    .auth-modal_show-forgot-password & {
+      transform: translateX(0);
+    }
+    .auth-modal_show-sign-in & {
+      transform: translateX(-100%);
+    }
+    .auth-modal_show-sign-up & {
+      transform: translateX(-200%);
+    }
+  }
+
+  &__forgot-password,
+  &__sign-in,
+  &__sign-up {
+    padding-top: 3rem;
+    height: 100%;
+    overflow-y: auto;
+    flex: 0 0 100%;
+  }
+
+  &__pos-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    margin: 0;
+  }
+
+  &__holder {
+    padding: 2rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+  }
+
+  &__welcome-text {
+    font-size: 1.2rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    color: $secondaryTextColor;
+
+    &_small {
+      font-size: .8rem;
+
+      a {
+        color: #d7d8d8 !important;
+      }
+    }
+
+    .router-link-active {
+      color: inherit !important;
+      text-decoration: underline !important;
+    }
+  }
+
+  &__pseudo-link {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__middle-line {
+    display: flex;
+    align-items: center;
+    color: $secondaryTextColor;
+
+    &:before,
+    &:after {
+      content: "";
+      flex: 1 1 auto;
+      border: 1px solid $lightGrey;
+    }
+
+    &-text {
+      flex: 0 0 auto;
+      padding: 0 1rem;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.small-top-banner {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: #f0f0f0;
+    padding: .6rem 5%;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 1rem;
+    font-size: .85rem;
+    display: flex;
+  }
+
+  img {
+    display: block;
+    width: 16px;
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .small-top-banner {
+    // display: none;
+  }
+}

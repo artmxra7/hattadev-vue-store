@@ -1,0 +1,46 @@
+.horizontal-menu {
+  &__row-menu {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    border: solid 1px #FF914D;
+    padding: .6rem 0;
+    margin-bottom: 3rem;
+
+    li {
+      padding: 0 .5rem;
+      border-right: 1px solid #707070;
+      text-align: center;
+      flex: 1;
+      color: #707070;
+
+      &.active {
+        font-weight: bold;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .horizontal-menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .horizontal-menu {
+    &__row-menu {
+      li {
+        padding-top: 1rem;
+      }
+    }
+  }
+}

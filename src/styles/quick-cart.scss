@@ -1,0 +1,55 @@
+.quick-cart {
+  width: 515px;
+  border: 1px solid $lightGrey;
+  border-radius: 20px;
+  background-color: white;
+  overflow-y: scroll !important;
+  max-height: 36.5rem;
+
+  &__item {
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    max-width: 64px;
+    max-height: 64px;
+  }
+
+  &__item-name {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  &__data {
+    font-size: .82rem;
+  }
+
+  &__param-value {
+    font-weight: bold;
+
+    &_price {
+      color: $primaryGreen;
+      font-weight: bold;
+    }
+  }
+
+  &__footer {
+    font-size: 1.2rem;
+    margin: 1rem;
+
+    .total-price {
+      text-align: right;
+      padding: 1rem 0;
+    }
+  }
+
+  .delete-icon {
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 959px) {
+    border: none;
+    max-height: 100%;
+  }
+}

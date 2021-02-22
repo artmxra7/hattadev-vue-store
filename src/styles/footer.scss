@@ -1,0 +1,61 @@
+footer {
+  padding: 0 0 100px;
+
+  .soc-link {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 3%;
+  }
+
+  .pay-list {
+    display: inline-flex;
+
+    &-item {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      border: 1px solid $lightGrey;
+      border-radius: 4px;
+      height: 24px;
+      min-width: 36px;
+      padding: 3px;
+      margin: 0 0 0 10px;
+      color: #b9b9b9;
+      font-size: 13px;
+      line-height: 1.5;
+
+      & * {
+        margin: 0 0 0 5px;
+
+        &:first-child {
+          margin: 0;
+        }
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+
+      &.fix-width {
+        width: 24px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .uni-reverse {
+    & > :nth-child(1) {
+      order: 3;
+    }
+
+    & > :nth-child(2) {
+      order: 1;
+    }
+
+    & > :nth-child(3) {
+      order: 2;
+    }
+  }
+}
