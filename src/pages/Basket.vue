@@ -43,7 +43,7 @@
                                 <i class="ion ion-ios-remove"></i>
                               </button>
                               <input type="text" v-model="item.qty" />
-                              <button @click="decreamentItem(item)" :disabled="item.qty >= 10" type="button">
+                              <button @click="decreamentItem(item)" :disabled="item.qty >= item.stok" type="button">
                                 <i class="ion ion-ios-add"></i>
                               </button>
                             </div>

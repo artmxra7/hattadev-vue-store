@@ -1,9 +1,9 @@
 /*----------------------------------------
 [Master Stylesheet]
 
-Project:	QuickCart â€“ One Page eCommerce Template
+Project:	QuickCart – One Page eCommerce Template
 Version:	1.0
-Primary use:	QuickCart â€“ One Page eCommerce Template
+Primary use:	QuickCart – One Page eCommerce Template
 ----------------------------------------*/
 /*----------------------------------------
 [Table of contents]
@@ -341,6 +341,7 @@ ul {
 .product__img {
   position: relative;
   display: flex;
+  float: left;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -361,7 +362,7 @@ ul {
   color: #373737;
   font-weight: 600;
   line-height: 140%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-size: 16px;
   padding-right: 50px;
 }
@@ -993,4 +994,35 @@ ul {
     -moz-transform: skewX(0deg);
     color: #ffffff;
   }
+}
+.discount-erwin {
+  display: flex;
+  margin-bottom: 10px;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.discount-erwin div:nth-child(1) {
+  width: 30px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: rgb(53, 220, 217);
+  font-size: 0.71rem;
+  font-weight: bold;
+  color: rgb(255, 92, 132);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.discount-erwin div:nth-child(2) {
+  font-size: 0.71rem;
+  color: rgba(49, 53, 59, 0.44);
+  text-decoration: line-through;
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0px 0px 0px 4px;
 }
