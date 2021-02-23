@@ -216,7 +216,7 @@ export default {
       formData.append('order_code', orderCode);
       if (cartToken) {
         axios
-          .post('https://ayen.koula.id/api/v1/user/keranjang', formData, {
+          .post(`${variables.server}/user/keranjang`, formData, {
             headers: {
               'Content-type': 'application/x-www-form-urlencoded',
               Authorization: `Bearer ${cartToken}`,
@@ -261,7 +261,7 @@ export default {
       formData.append('noHp', formPesanan.noHp);
       formData.append('kurir', formPesanan.kurir);
       axios
-        .post('https://ayen.koula.id/api/v1/user/order', formData, {
+        .post(`${variables.server}/user/order`, formData, {
           headers: {
             'Content-type': 'application/x-www-form-urlencoded',
             Authorization: `Bearer ${token}`,
@@ -328,7 +328,7 @@ export default {
       const token = localStorage.getItem('contextToken');
       axios
         .post(
-          'https://ayen.koula.id/api/v1/user/keranjang/decreament',
+          `${variables.server}/user/keranjang/decreament`,
 
           formData,
 
@@ -361,7 +361,7 @@ export default {
       const token = localStorage.getItem('contextToken');
       axios
         .post(
-          'https://ayen.koula.id/api/v1/user/keranjang/increament',
+          `${variables.server}/user/keranjang/increament`,
 
           formData,
 

@@ -3,7 +3,6 @@
       <div id="main">
         <Header />
         <div class="main-holder">
-          <Breadcrumbs />
           <router-view />
         </div>
         <Footer />
@@ -13,25 +12,20 @@
 <script>
 import { mapActions } from 'vuex';
 import i18n from '@/i18n';
-
-// import CookieBanner from './components/CookieBanner.vue';
-// import SmallTopBanner from './components/SmallTopBanner.vue';
 import Header from './components/Header.vue';
-import Breadcrumbs from './components/Breadcrumbs.vue';
 import Footer from './components/Footer.vue';
 
 
 export default {
   components: {
     Header,
-    Breadcrumbs,
     Footer,
   },
   data: () => ({
     menuVisible: false,
   }),
   mounted() {
-    i18n.locale = 'de';
+    i18n.locale = 'ID';
     document.title = ' Ayen Store';
   },
   created() {

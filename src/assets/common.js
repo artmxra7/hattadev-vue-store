@@ -1,4 +1,4 @@
-const apiUrl = 'https://ayen.koula.id';
+const apiUrl = process.env.VUE_APP_API;
 // eslint-disable-next-line no-unused-vars
 
 export default {

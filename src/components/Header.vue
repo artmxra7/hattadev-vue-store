@@ -508,7 +508,7 @@ export default {
       formData.append('password', customer.password);
       formData.append('passwordConfirm', customer.passwordConfirm);
       axios
-        .post('https://ayen.koula.id/api/v1/register', formData, {
+        .post(`${variables.server}/register`, formData, {
           headers: {
             'Content-type': 'application/x-www-form-urlencoded',
           },
@@ -533,7 +533,7 @@ export default {
       formData.append('email', customerLogin.email);
       formData.append('password', customerLogin.password);
       axios
-        .post('https://ayen.koula.id/api/v1/login', formData, {
+        .post(`${variables.server}/login`, formData, {
           headers: {
             'Content-type': 'application/x-www-form-urlencoded',
           },

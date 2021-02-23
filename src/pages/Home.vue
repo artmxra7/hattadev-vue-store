@@ -90,8 +90,7 @@
 <script>
 import axios from 'axios';
 import { mapActions, mapGetters } from 'vuex';
-// eslint-disable-next-line no-undef
-// eslint-disable-next-line no-use-before-define
+import variables from '../assets/common';
 
 export default {
   name: 'Home',
@@ -122,14 +121,12 @@ export default {
   methods: {
     ...mapActions(['updateCartItems', 'createOrderCode']),
     getProductData() {
-      axios.get('https://ayen.koula.id/api/v1/products/all').then((response) => {
+      axios.get(`${variables.server}/products/all`).then((response) => {
         this.items = response.data.data;
-        console.log(this.items);
-        // eslint-disable-next-line no-console
       });
     },
     getCategoryProductData() {
-      axios.get('https://ayen.koula.id/api/v1/category/all').then((response) => {
+      axios.get(`${variables.server}/category/all`).then((response) => {
         this.category = response.data.data;
 
         // eslint-disable-next-line no-console
@@ -166,7 +163,7 @@ export default {
         formData.append('satuan', itemToAdd.satuan);
         const token = localStorage.getItem('contextToken');
         axios
-          .post('https://ayen.koula.id/api/v1/user/keranjang/add', formData, {
+          .post(`${variables.server}/user/keranjang/add`, formData, {
             headers: {
               'Content-type': 'application/x-www-form-urlencoded',
               Authorization: `Bearer ${token}`,
@@ -181,9 +178,6 @@ export default {
             this.$toaster.success('Barang di tambahkan ke keranjang');
           })
           .catch(() => {
-            // eslint-disable-next-line no-console
-            // this.$toaster.error('Email atau Password salah');
-            // this.isLoading = false;
           });
       } else {
         this.$swal('Silahkan login terlebih dahulu');
