@@ -1,9 +1,9 @@
 /*----------------------------------------
 [Master Stylesheet]
 
-Project:	QuickCart – One Page eCommerce Template
+Project:	QuickCart ï¿½ One Page eCommerce Template
 Version:	1.0
-Primary use:	QuickCart – One Page eCommerce Template
+Primary use:	QuickCart ï¿½ One Page eCommerce Template
 ----------------------------------------*/
 /*----------------------------------------
 [Table of contents]
@@ -352,9 +352,29 @@ ul {
   margin-bottom: auto;
   overflow: hidden;
 }
+.product__img__detail {  
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height:20rem;
+}
+.product__img__detail img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
 .product__img img {
   width: 100%;
   height: auto;
+}
+.deskripsi {
+  margin-top: 1rem;
 }
 .product__title {
   position: relative;
@@ -364,6 +384,16 @@ ul {
   line-height: 140%;
   margin-bottom: 5px;
   font-size: 16px;
+  padding-right: 50px;
+}
+.product__desc {
+  position: relative;
+  z-index: 2;
+  color: #262323;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 5px;
+  font-size: 13px;
   padding-right: 50px;
 }
 .product__price {
@@ -837,7 +867,12 @@ ul {
 .name__style{
   font-size: 2rem;
 }
-
+.erwin-pointer {
+  cursor: pointer;
+}
+.container__image{
+  height: 200px;
+}
 .button_base {
   align-items: center;
   background-color: #f0f0f0;  
